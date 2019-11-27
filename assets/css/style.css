@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen|Quicksand:400,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color2);
+    display:flex;
+    justify-content: center;
+}
+body > div {
+    width: 1200px;
+}
+.elegant {
+    font-family: 'Oxygen', sans-serif;
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    /*width: 100px;
+height: 100px;
+object-fit: cover; */
+    width: 100%;
+    display: block;
+    
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+/* HEADER */
+
+header {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem; 
+    margin-bottom: 200px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo>* {
+    margin-right: 10px;
+}
+
+header .links {
+    display: flex;
+    font-family: 'Roboto Slab', serif;
+}
+
+header .links>* {
+    margin-left: 20px;
+}
+
+header .links>*:first-child {
+    margin: 0;
+}
+
+:root {
+    --accent: orange;
+    --color2: #333;
+
+}
+
+/* CARDS pealeht */
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0px;
+}
+
+@media (max-width: 600px) {
+    .cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.1s;
+    position: relative;
+}
+
+.card .image {
+    filter:  grayscale(100%);
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease-in-out;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .card:hover .overlay {
+    opacity: .7;
+  }
+
+  .text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    color: black;
+    font-size: 30px;
+    line-height: 150%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* PROJEKTI vaade */
+
+
+
+h1 {
+    font-size: 30px;
+    font-weight: normal;
+    line-height: 150%;
+}
+
+.story {
+    text-align: justify;
+
+}
+
+
+/* FOOTER */
+
+footer {
+
+    height: 100px;
+    margin-top: 25px;
+}
+
+footer a {
+    color: var(--color2);
+}
+
+.content {
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 25px;
+}
+.content .image {
+    flex:1;
+    object-fit: cover;
+}
+
+.content .text {
+    flex:1;
+}
